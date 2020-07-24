@@ -5,7 +5,8 @@ FROM alpine:edge
 COPY entrypoint.sh /entrypoint.sh
 
 # Install required packages
-RUN apk add doxygen graphviz ttf-freefont python3
+RUN apk add doxygen graphviz ttf-freefont python3 py-pip
+RUN pip install doxypypy
 
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
