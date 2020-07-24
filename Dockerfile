@@ -5,7 +5,7 @@ FROM alpine:edge
 COPY entrypoint.sh /entrypoint.sh
 
 # Install required packages
-RUN apk add doxygen graphviz ttf-freefont python3 py-pip
+RUN apk add doxygen graphviz ttf-freefont python3=3.7.0-r0 py-pip
 RUN pip install doxypypy
 
 
